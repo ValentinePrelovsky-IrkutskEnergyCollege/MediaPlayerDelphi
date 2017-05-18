@@ -13,6 +13,7 @@ type
     Button1: TButton;
     Image1: TImage;
     CheckBox1: TCheckBox;
+    OpenDialog1: TOpenDialog;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -37,7 +38,9 @@ begin
     //Display := Image1.Canvas;
     //DIsplay := Image1.Parent;
     Scaled := true;
-    FileName := 'C:\Users\Valentin\Desktop\4.avi';
+    OpenDialog1.Filter := 'WMV video | *.wmv';
+    OpenDialog1.Execute;
+    FileName := OpenDialog1.FileName;
     //FileName := 'C:\Users\Valentin\Desktop\3.wmv';
     DisplayRect := Panel1.ClientRect;
     Open;

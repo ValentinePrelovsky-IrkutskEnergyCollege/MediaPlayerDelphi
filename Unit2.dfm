@@ -53,4 +53,8 @@ object Form1: TForm1
     Caption = 'use form displayer'
     TabOrder = 3
   end
+  object OpenDialog1: TOpenDialog
+    Left = 80
+    Top = 16
+  end
 end
